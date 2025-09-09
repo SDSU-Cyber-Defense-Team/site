@@ -15,9 +15,7 @@ jobs:
       - uses: actions/checkout@v5
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
-      - name: Disable Vercel Telemetry
-        run: vercel telemetry disable
-      - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build site
+        run: npm run build
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
