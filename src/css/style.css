@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-cdt-red: #a6192e;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-normal: "IBM Plex Sans", sans-serif;
+}
+
+.hero-text {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 55px;
+}
+
+#hero-section {
+  background-image: url('/images/bg.jpg');
+}
+
+@supports (background-image: url('/images/bg.avif')) {
+  #hero-section {
+    background-image: url('/images/bg.avif');
+  }
+}
