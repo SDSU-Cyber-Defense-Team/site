@@ -2,8 +2,8 @@
 
 @theme {
   --color-cdt-red: #a6192e;
-  --font-mono: "IBM Plex Mono", monospace;
-  --font-normal: "IBM Plex Sans", sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-normal: 'IBM Plex Sans', sans-serif;
 }
 
 .hero-text {
@@ -19,5 +19,15 @@
 @supports (background-image: url('/images/bg.avif')) {
   #hero-section {
     background-image: url('/images/bg.avif');
+  }
+}
+
+.blinky {
+  animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
 }
