@@ -6,6 +6,14 @@
   --font-normal: 'IBM Plex Sans', sans-serif;
 }
 
+@layer base {
+  img {
+    max-width: none;
+    width: auto;
+    height: auto;
+  }
+}
+
 .hero-text {
   font-weight: 500;
   font-style: normal;
