@@ -1,6 +1,8 @@
 name: Vercel Production Deployment
 env:
+  # grab this from Vercel Team Settings
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  # grab this from Vercel Project Settings
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   VERCEL_TELEMETRY_DISABLED: 1
 on:
@@ -20,4 +22,5 @@ jobs:
       - name: Build site
         run: npm run build
       - name: Deploy Project Artifacts to Vercel
+        # grab this from Account Tokens https://vercel.com/account/settings/tokens
         run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
